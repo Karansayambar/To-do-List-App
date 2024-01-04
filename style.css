@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+    --header-bg:black;
+    --bady-bg:rgba(51, 51, 51, 1);
+}
+
+header{
+    height: 180px;
+    width: 100%;
+    background-color: var(--header-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    position: relative;
+    width: 100%;
+}
+.body{
+    background-color: var(--bady-bg);
+    height: 75.3vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.header-form{
+    position: absolute;
+    top: 150px;
+    width: 50%;
+    left: 27%;
+}
+
+.header-form #taskInput{
+    height: 60px;
+    width: 80%;
+    background-color: rgba(38, 38, 38, 1);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0px 30px;
+    color: white;
+    font-size: 18px;
+}
+#dueDate{
+    width: 10px;
+    height: 10px;
+    left: 10px;
+}
+.header-form button{
+    height: 60px;
+    width: 10%;
+    background-color: rgba(30, 111, 159, 1);
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.fa-calendar-days{
+    color: white;
+}
+.container{
+    position: relative;
+    top: -20px;
+    margin: auto;
+    color: white;
+}
+
+
+.container > div > .items{
+    padding-bottom: 30px;
+}
+
+.items{
+    display: flex;
+    width: 750px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item{
+    display: flex;
+    gap: 1rem;
+    color: rgba(78, 168, 222, 1);
+    font-weight: 700;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item > p:nth-child(2){
+    color: white;
+    background-color: rgba(217, 217, 217, 0.208);
+    text-align: center;
+    border-radius: 100%;
+    width: 25px;
+    padding: 3px;
+}
+.Priority{
+    color: rgba(130, 132, 250, 1);
+}
+#tasks{
+    height: 200px;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+}
+#tasks::-webkit-scrollbar{
+    display: none;
+}
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    padding:20px;
+    margin: 10px 0px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgba(38, 38, 38, 1);
+}
+
+@media screen and (max-width:480px){
+    *{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    header > img{
+        height: 250px;
+        width: 250px;
+    }
+    .body{
+        width: 100%;
+        height: 80vh;
+    }
+    .header-form{
+        left: 30px;
+        width: 90%;
+    }
+    .header-form button{
+        width: 60px;
+    }
+    .items{
+        width: 80vw;
+    }
+    .item{
+        width: 100px;
+    }
+    #tasks{
+        width:90%;
+        margin: 20px;
+        height: 350px;
+        margin: 0 20px;
+    }
+    .task{
+        width: auto;
+    }
+
+    .container{
+        position: relative;
+        top: 10px;
+        margin: auto;
+    }
+    .container > div{
+        width: 90%;
+        margin: 30px;
+    }
+}

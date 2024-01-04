@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>To-do List App</title>
 </head>
+
 <body>
-    
+    <header>
+        <img src="./Accets/Logo.svg" alt="">
+    </header>
+    <section class="body">
+        <form class="header-form">
+            <label for="taskName"></label>
+            <input type="text" name="taskInput" id="taskInput" placeholder="Enter Your To-do List Task">
+            <input type="date" id="dueDate" name="dueDate" required>
+            <button type="button" onclick="addTask()">ADD <i class="fas fa-plus"></i></button>
+        </form>
+        <div class="container">
+            <div>
+                <div class="items">
+                    <div class="item">
+                        <p>To-do list</p>
+                        <p id="todo">0</p>
+                    </div>
+                    <div class="item">
+                        <p class="Priority">High Priority</p>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div id="tasks">
+                   
+                </div>
+            </div>
+
+            <div>
+                <div class="items">
+                    <div class="item">
+                        <p>Started</p>
+                        <p id="taskStarted">0</p>
+                    </div>
+                    <div class="item">
+                        <p class="Priority">High Priority</p>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <p>Completed</p>
+                        <p id="taskComplete">0</p>
+                    </div>
+                    <div class="item">
+                        <p class="Priority">High Priority</p>
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
 </body>
+
 </html>
